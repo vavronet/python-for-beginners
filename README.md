@@ -1,2 +1,2 @@
-# python-for-beginners
-Python exercises from class 
+# Python For Beginners
+Exercises created and resolved by Christiana and Daria during the python classes.
