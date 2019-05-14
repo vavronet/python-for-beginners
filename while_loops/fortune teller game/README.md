@@ -1,0 +1,2 @@
+You have to write a Python game that will display to the user a random fortune cookie quote.
+The program will run as long as the user will respond with Y to the question: "Do you want another quote? (Y/N)"
