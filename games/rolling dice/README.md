@@ -6,3 +6,4 @@ Rolling Dice Simulation
 - computer turn will result in two seperate randomly generated numbers as well
 - These numbers will also be between 1-6 and be added 
 - The winner is whoever got the bigger sum.
+2) Same as 1) but we add a "do you want to play again?"
