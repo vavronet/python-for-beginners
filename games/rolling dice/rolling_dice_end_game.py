@@ -5,8 +5,17 @@ user_sum = 0
 computer_sum = 0
 
 print('Welcome to the rolling dice game!')
-target = int(input('Please type in a number to set your target:\n'))
-input('Press enter to continue')
+
+target_is_integer = False
+
+while target_is_integer == False:
+    try:
+        target = int(input('Please type in a number to set your target:\n'))
+        target_is_integer = True
+    except ValueError:
+        print('That is not an integer.')
+else: 
+    input('Press enter to continue')
 
 while game_end == False:
     user_dice_1 = random.randint(1,6)
