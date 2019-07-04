@@ -7,7 +7,7 @@ def get_random_element(a_list):
     return random_element
 
 # Returns the formatted word with underscores for the unguessed letters 
-def show_placeholders(word, letter, guessed_letters):
+def show_placeholders(word, letter, guessed_letters, wrong_letters):
     word_capitals = word.upper()
     letter_capital = letter.upper()
     placeholders = ''
@@ -19,4 +19,6 @@ def show_placeholders(word, letter, guessed_letters):
              placeholders = placeholders + x + ' '
         else:
             placeholders = placeholders + '_ '
+            if letter_capital != '':
+                wrong_letters.append(letter_capital)
     return placeholders
