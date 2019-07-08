@@ -6,5 +6,4 @@ def fibonacci(n):
         sequence.append(sequence[len(sequence) - 1] + sequence[len(sequence) - 2])
     return sequence
 
-
-print(fibonacci(8))
+print(fibonacci(8)[-1])
