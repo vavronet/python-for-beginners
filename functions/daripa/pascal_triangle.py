@@ -4,24 +4,36 @@
 # 1 2 1
 # 1 3 3 1
 # 1 4 6 4 1 
+# 1 5 10 10 5 1
+
+def get_unknown_content(row, previous_row):
+    unknown = []
+    counter = 1
+    while counter <= (row - 2):
+        item = previous_row[counter] + previous_row[counter - 1]
+        unknown.append(item)
+        counter = counter + 1
+
+    return unknown
+
 
 def pascal_triangle(n):
-    last = []
+    last_row = []
     row = 1
     while row <= n:
         content = [1]
+       
         if row == 1:
             continue
         elif row == 2:
             content.append(1)
         else:
-            unknown = 1
-            while unknown <= row - 2:
-                content.append(1)
-                unknown = unknown + 1
+            unknown = get_unknown_content(row, last_row)
+            content = content + unknown
             content.append(1)
+       
         print(content)
-        last = content
+        last_row = content
         row = row + 1 
 
 pascal_triangle(9)
