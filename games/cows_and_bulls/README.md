@@ -18,5 +18,6 @@ number og tries should be displayed at the end
 
 Steps:
 - Creat a variable that is a random 4 digit number between 1000 and 9999 and then covert it into a string.
-- Function that takes the number you typed in and displays the cows and bulls messege
-- 
+- Function that takes the number you typed in and displays the cows and bulls messege.
+- Create a while loop and start the game (and end it).
+- Say # of tries at the end.
