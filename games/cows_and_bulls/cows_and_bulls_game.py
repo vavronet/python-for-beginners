@@ -7,8 +7,21 @@ typed_string = input('Type in a 4 digit number: \n')
 
 def cows_and_bulls(secret, typed):
     print(secret)
-    print(typed)
-    print('3 cows, 2 bulls')
+    secret_list = []
+    typed_list = []
+    cows_list = []
 
+    for x in secret:
+        secret_list.append(x)
+
+    for x in typed:
+        typed_list.append(x)
+
+    for x in typed_list:
+        if x in secret_list:
+            cows_list.append(x)
+
+    cows = int(len(cows_list))    
+    print(cows)
 
 cows_and_bulls(secret_string, typed_string)
