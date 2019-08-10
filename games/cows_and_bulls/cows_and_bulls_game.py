@@ -6,22 +6,33 @@ number_of_tries = 0
 typed_string = input('Type in a 4 digit number: \n')
 
 def cows_and_bulls(secret, typed):
-    print(secret)
-    secret_list = []
-    typed_list = []
-    cows_list = []
-
-    for x in secret:
-        secret_list.append(x)
+    template = "{} cows, {} bulls"
+    cows = 0
+    bulls = 0
 
     for x in typed:
-        typed_list.append(x)
-
-    for x in typed_list:
-        if x in secret_list:
-            cows_list.append(x)
-
-    cows = int(len(cows_list))    
-    print(cows)
+        if x in secret:
+            cows = 9
 
 cows_and_bulls(secret_string, typed_string)
+
+print(secret_string)
+
+# 2 cows, 0 bulls
+# idx = 0
+# Secret String: 3962
+# Typed String : 8342
+# Step 1
+# x = 8
+# idx = 0
+# secret_at_idx = secret[idx] = 3
+# if x = secret_at_idx then add to cows (cows = cows + 1)
+# elif x in secret then add to bulls (bulls = bulls + 1)
+# idx = idx + 1
+# Step 2
+# x = 3
+# idx = 1
+# secret_at_idx = secret[idx] = 9
+# if x = secret_at_idx then add to cows (cows = cows + 1)
+# elif x in secret then add to bulls (bulls = bulls + 1)
+# idx = idx + 1
