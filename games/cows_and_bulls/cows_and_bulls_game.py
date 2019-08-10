@@ -9,10 +9,18 @@ def cows_and_bulls(secret, typed):
     template = "{} cows, {} bulls"
     cows = 0
     bulls = 0
+    idx = 0
+    secret_at_idx = 0
 
     for x in typed:
-        if x in secret:
-            cows = 9
+        secret_at_idx = secret[idx]
+        if x == secret_at_idx:
+            cows = cows + 1
+        elif x in secret:
+            bulls = bulls + 1
+        idx = idx + 1
+
+    print(template.format(cows, bulls))
 
 cows_and_bulls(secret_string, typed_string)
 
