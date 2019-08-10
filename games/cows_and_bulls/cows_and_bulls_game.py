@@ -5,6 +5,13 @@ secret_string = str(secret_number)
 number_of_tries = 0
 typed_string = input('Type in a 4 digit number: \n')
 
+def validation(typed):
+    # check if it is only 4 digits long
+    # make sure they are all numbers
+    # if it is invalid then 1) print an error messege 2) return false
+    # if it is valid then return true
+    return True
+
 def cows_and_bulls(secret, typed):
     template = "{} cows, {} bulls"
     cows = 0
