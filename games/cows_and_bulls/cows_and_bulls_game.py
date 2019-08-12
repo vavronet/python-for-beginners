@@ -3,7 +3,11 @@ import random
 secret_number = random.randint(1000, 9999)
 secret_string = str(secret_number)
 number_of_tries = 0
-typed_string = input('Type in a 4 digit number: \n')
+typed_string = (input('Type in a 4 digit number: \n'))
+
+while len(typed_string) != 4:
+    print('That is invalid. Try again!')
+    typed_string = (input('Type in a 4 digit number: \n'))
 
 def validation(typed):
     # check if it is only 4 digits long
